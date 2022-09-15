@@ -1,0 +1,131 @@
+    1  ll
+    2  vi /etc/passwd
+    3  ip a
+    4  vi /etc/ssh/sshd_config
+    5  ip a
+    6  vi /etc/netplan/00-installer-config.yaml 
+    7  netplan apply 
+    8  vi /etc/netplan/00-installer-config.yaml 
+    9  netplan apply 
+   10  ip a
+   11  init 0
+   12  vi /etc/ssh/sshd_config
+   13  passwd root
+   14  ip a
+   15  figlet
+   16  apt install figlet
+   17  apt update
+   18  apt install figlet
+   19  figlet Google
+   20  figlet Play Ground
+   21  figlet Ubuntu
+   22  vi .bashrc 
+   23  init 0
+   24  vi /etc/netplan/00-installer-config.yaml 
+   25  netplan 
+   26  netplan apply 
+   27  vi install.sh
+   28  sh install.sh 
+   29  vi /etc/fstab 
+   30  swapod-a
+   31  swapoff -a
+   32  kubeadm init 
+   33  mkdir -p $HOME/.kube
+   34  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   35  kubectl get nodes
+   36  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/tigera-operator.yaml
+   37  curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/custom-resources.yaml -O
+   38  kubectl create -f custom-resources.yaml
+   39  kubectl get pod
+   40  kubectl get nodes
+   41  kubectl get pod
+   42  kubectl get nodes
+   43* kubectl run test --image nginx --port 80
+   44  kubectl get pod
+   45  kubectl get nodes
+   46  kubectl get pod
+   47  kubectl get nodes
+   48  vi .bashrc 
+   49  source .bashrc 
+   50  kubectl get nodes
+   51  systemctl restart kubelet.service 
+   52  kubectl get nodes
+   53  kubectl get pod -A
+   54  kubectl get nodes
+   55  init 6
+   56  kubectl get nodes
+   57  kubectl get pod -A
+   58  kubectl get nodes
+   59  kubectl get pod -A
+   60  kubectl get nodes
+   61  kubectl get pod 
+   62  kubectl describe pod test 
+   63  kubectl get pod 
+   64  kubectl get nodes
+   65  journalctl 
+   66  journalctl -xe
+   67  journalctl vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+   68  systemctl restart kubelet.service 
+   69  systemctl daemon-reload
+   70  systemctl restart kubelet.service 
+   71  journalctl -xe
+   72  kubectl get nodes
+   73  kubectl get pod -A
+   74  kubectl get nodes
+   75  journalctl -xe
+   76  kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/tigera-operator.yaml
+   77  kubectl delete -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/tigera-operator.yaml
+   78  kubectl create -f custom-resources.yaml
+   79  kubectl delete -f custom-resources.yaml
+   80  kubectl create -f custom-resources.yaml
+   81  ls
+   82  kubectl create -f custom-resources.yaml 
+   83  vi custom-resources.yaml 
+   84  kubectl create -f custom-resources.yaml 
+   85  kubectl get node
+   86  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+   87  kubectl get nodes
+   88  kubectl get pod -A
+   89  kubectl get pod -A -o wide
+   90  kubectl get pod -o wide
+   91  kubectl get pod 
+   92  kubectl describe pod test 
+   93  kubectl get pod 
+   94  kubectl get pod -o wide
+   95  kubectl get nodes
+   96  kubectl get pod 
+   97  mkdir myapp
+   98  cd myapp/
+   99  ls
+  100  vi pod.yaml
+  101  kubectl create -f pod.yaml 
+  102  kubectl get pod
+  103  kubectl describe pod mypod 
+  104  kubectl get pod
+  105  vi pod.yaml
+  106  kubectl run newpod --image nginx --labels app=newapp --port 80 --dry-run client -o yaml
+  107  kubectl run newpod --image nginx --labels app=newapp --port 80 --dry-run client -o yaml > newpod.yaml
+  108  kubectl run newpod --image nginx --labels app=newapp --port 80 --dry-run=client -o yaml > newpod.yaml
+  109* 
+  110  vi pod.yaml 
+  111  kubectl create -f newpod.yaml 
+  112  kubectl get pod
+  113  kubectl describe pod newpod 
+  114  kubectl get pod
+  115  vi pod.yaml 
+  116  kubectl run newpod --image nginx --labels app=newapp --port 80 --dry-run=client -o yaml > newpod.yaml
+  117  vi pod.yaml 
+  118  kubectl get pod
+  119  kubectl logs mypod
+  120  kubectl logs mypod -c con1
+  121  kubectl logs mypod -c con2
+  122  kubectl get pod
+  123  kubectl exec -it mypod -- bash
+  124  kubectl exec -it mypod ls
+  125  kubectl exec -it mypod -- ls
+  126  kubectl exec -it mypod -- date
+  127  kubectl exec -it mypod -- cat /etc/passwd
+  128  kubectl exec -it mypod -- bash
+  129  kubectl get pod
+  130  kubectl get nodes
+  131  history > cmd.txt
