@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: mypod-readi-exec
+   labels:
+      app: myapp
+spec:
+   containers:
+   - name: con1
+     image: nginx:latest
+     ports:
+     - containerPort: 80
+     readinessProbe:
+       exec:
+         command:
+         - cat
+         - /usr/share/nginx/html/index123.html
+       initialDelaySeconds: 10
+       periodSeconds: 5
+   - name: con2
+     image: tomcat:latest
+     ports:
+     - containerPort: 8080
+
+---
+---
+apiVersion: v1
+kind: Service
+metadata:
+        name: readiexec-svc
+spec:
+    selector:
+      app: myapp
+    ports:
+    - port: 80
+
+
