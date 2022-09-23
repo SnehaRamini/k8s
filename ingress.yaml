@@ -35,7 +35,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "ansari.com"
+  - host: "aneesh.com"
     http:
       paths:
       - pathType: Prefix
